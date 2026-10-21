@@ -1,0 +1,119 @@
+/* ===== Atma Coffee - tema vintage budaya Jawa ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --soga: #4a2511;      /* cokelat soga (batik) */
+  --soga-tua: #2a1409;
+  --maroon: #6b2d12;
+  --emas: #c9972e;      /* emas kuno */
+  --kertas: #e9d9b4;    /* kertas lontar/perkamen */
+  --kertas-muda: #f3e8cc;
+  --garis: #b99b63;
+}
+body {
+  font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+  line-height: 1.7;
+  color: var(--soga-tua);
+  background-color: var(--kertas);
+  background-image: url("../images/batik-kawung.jpg");
+  background-size: 60px 60px;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--maroon); }
+a:focus-visible { outline: 3px solid var(--emas); outline-offset: 2px; }
+
+/* ===== Header & Navigasi ===== */
+header {
+  background: var(--soga);
+  color: var(--kertas-muda);
+  padding: 20px 24px 16px;
+  border-bottom: 4px double var(--emas);
+  box-shadow: 0 4px 0 var(--soga-tua);
+}
+.header-isi {
+  max-width: 1000px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+}
+.logo { font-size: 1.8rem; font-style: italic; letter-spacing: 1px; color: var(--emas); }
+.logo small { display: block; font-size: .75rem; font-style: normal; letter-spacing: 3px; color: var(--kertas-muda); }
+nav ul { list-style: none; display: flex; gap: 6px; }
+nav a {
+  display: block; padding: 8px 18px;
+  color: var(--kertas-muda); text-decoration: none;
+  border: 1px solid transparent;
+}
+nav a:hover, nav a.aktif { border-color: var(--emas); background: var(--soga-tua); color: var(--emas); }
+
+/* ===== Layout ===== */
+main {
+  max-width: 1000px; margin: 28px auto; padding: 32px 28px 40px;
+  background: var(--kertas-muda);
+  border: 2px solid var(--soga);
+  outline: 1px solid var(--emas); outline-offset: -8px;
+  box-shadow: 8px 8px 0 rgba(74, 37, 17, .35);
+}
+section { margin-bottom: 44px; }
+h1, h2, h3 { line-height: 1.25; color: var(--soga); }
+h2 {
+  font-size: 1.6rem; font-style: italic; text-align: center;
+  margin-bottom: 20px; padding-bottom: 12px;
+  border-bottom: 3px double var(--emas);
+}
+p + p { margin-top: 12px; }
+.dua-kolom h2 { text-align: left; }
+
+/* ===== Hero ===== */
+.hero img { width: 100%; border: 3px solid var(--soga); }
+.hero-teks { padding-top: 24px; text-align: center; }
+.hero-teks h1 { font-size: 2.3rem; font-style: italic; margin-bottom: 6px; }
+.sapaan { color: var(--maroon); letter-spacing: 2px; font-size: .9rem; margin-bottom: 10px; }
+.tombol {
+  display: inline-block; margin-top: 18px; padding: 10px 28px;
+  background: var(--soga); color: var(--emas); text-decoration: none;
+  border: 2px solid var(--emas); letter-spacing: 1px;
+}
+.tombol:hover { background: var(--emas); color: var(--soga-tua); }
+
+/* ===== Teks + Gambar ===== */
+.dua-kolom { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; }
+.dua-kolom img { border: 3px solid var(--soga); padding: 4px; background: var(--kertas); }
+
+/* ===== Visi Misi ===== */
+.kartu-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.kartu { background: var(--kertas); border: 2px solid var(--soga); outline: 1px solid var(--emas); outline-offset: -6px; padding: 22px; }
+.kartu h3 { margin-bottom: 8px; font-style: italic; }
+.kartu ul { padding-left: 20px; }
+
+/* ===== Tabel ===== */
+table { width: 100%; border-collapse: collapse; background: var(--kertas); border: 3px double var(--soga); }
+caption { padding: 8px 0; font-style: italic; color: var(--maroon); }
+th, td { padding: 10px 14px; border: 1px solid var(--garis); text-align: left; }
+thead th { background: var(--soga); color: var(--emas); letter-spacing: 1px; }
+tbody tr:nth-child(even) { background: #ddc998; }
+
+/* ===== Halaman Menu ===== */
+main > h1 { text-align: center; font-size: 2.2rem; font-style: italic; }
+main > p { text-align: center; }
+.nav-kategori { justify-content: center; margin: 12px 0 30px; flex-wrap: wrap; }
+.nav-kategori a { color: var(--soga); border: 1px solid var(--soga); }
+.nav-kategori a:hover { color: var(--emas); }
+.menu-grup { background: var(--kertas); border: 2px solid var(--soga); outline: 1px solid var(--emas); outline-offset: -6px; padding: 22px; }
+.menu-item { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px dashed var(--soga); }
+.menu-item:last-child { border-bottom: none; }
+.menu-item p { font-size: .92rem; font-style: italic; color: var(--maroon); }
+.harga { font-weight: bold; white-space: nowrap; color: var(--soga); }
+.kembali { font-size: .9rem; text-align: right !important; margin-top: 8px; }
+
+/* ===== Footer ===== */
+footer {
+  background: var(--soga); color: var(--kertas-muda); text-align: center;
+  padding: 22px; font-size: .9rem; border-top: 4px double var(--emas);
+}
+footer a { color: var(--emas); }
+
+/* ===== Responsif ===== */
+@media (max-width: 700px) {
+  .dua-kolom, .kartu-wrap { grid-template-columns: 1fr; }
+  .hero-teks h1 { font-size: 1.7rem; }
+  main { margin: 16px 10px; padding: 24px 16px; }
+}
